@@ -1,8 +1,9 @@
 # 孫子 Savaş Sanatı — İnteraktif Öğrenme Platformu
 
-Sun Tzu'nun *Savaş Sanatı* tekniklerini **pratik uygulamalı** olarak öğreten,
-Türkçe, tamamen statik bir web sitesi. Her teknik dört alana indirgenir:
-**iş ve strateji, kişisel gelişim, siber güvenlik (savunma) ve tarihsel komuta.**
+Sun Tzu'nun *Savaş Sanatı* tekniklerini **dizi ve filmlerden sahnelerle** öğreten,
+Türkçe, tamamen statik bir web sitesi. Her teknik, ekranın en büyük stratejistleri
+üzerinden işlenir: **Game of Thrones, The Godfather, Breaking Bad, Yüzüklerin Efendisi...**
+Senaryolarda karar koltuğuna sen oturursun (⚠ spoiler içerir).
 
 ## İçerik
 
@@ -11,9 +12,9 @@ Her modül şu akışı izler:
 1. **Animasyonlu giriş** — alıntı kelime kelime belirir, arka planda hareketli strateji haritası (SVG/CSS)
 2. **Tarihsel bağlam** — orijinal metin pasajı + tarihten örnek
 3. **Tekniğin anatomisi** — SVG diyagram + interaktif prensip kartları
-4. **4 alan, 4 senaryo** — "karar ver" tipi interaktif senaryolar, anında Sun Tzu perspektifli geri bildirim
+4. **4 dizi/film, 4 senaryo** — Tywin, Vito Corleone, Gus Fring, Gandalf'ın yerinde "karar ver" tipi interaktif senaryolar, anında Sun Tzu perspektifli geri bildirim
 5. **Quiz** — açıklamalı geri bildirim ve puanlama
-6. **"Bu Hafta Uygula"** — gerçek hayat egzersiz kartı (ilerleme tarayıcıda saklanır)
+6. **"Bu Hafta İzle ve Analiz Et"** — sahne analizi görevleri (ilerleme tarayıcıda saklanır)
 7. **Slayt destesi** — reveal.js sunumu (yazdırılabilir/PDF)
 
 ### Mevcut modüller

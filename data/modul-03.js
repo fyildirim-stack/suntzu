@@ -1,6 +1,7 @@
 // Bölüm 3 — Savaşmadan Kazanmak: modül içeriği.
 // Senaryo ve quiz motoru (assets/js/app.js) bu veriyi okur;
 // yeni bir modül eklemek için aynı şemada yeni bir data/modul-XX.js yazmak yeterlidir.
+// Senaryolar dizi/film sahnelerine dayanır ve SPOILER içerir.
 
 window.MODULE_DATA = {
   chapter: 3,
@@ -12,129 +13,129 @@ window.MODULE_DATA = {
     {
       rank: "1", cls: "best",
       title: "En üstünü: Düşmanın planını boz",
-      body: "Rakibin stratejisi daha kuruluş aşamasındayken etkisiz hale getirilir. Çatışma hiç başlamaz; maliyet sıfıra yakındır. Bunun ön koşulu istihbarat ve öngörüdür: planı görmeden bozamazsın."
+      body: "Rakibin stratejisi daha kuruluş aşamasındayken etkisiz hale getirilir. Çatışma hiç başlamaz; maliyet sıfıra yakındır. Bunun ön koşulu istihbarat ve öngörüdür: planı görmeden bozamazsın. Ekrandan örnek: Gandalf'ın asıl planı Sauron'un ordusunu yenmek değil, gücünün kaynağını (Yüzük) yok etmektir."
     },
     {
       rank: "2", cls: "",
       title: "Sonra: İttifaklarını dağıt",
-      body: "Rakibi yalnızlaştır. Müttefiklerinden, destekçilerinden, kaynaklarından koparılan rakip, savaşma iradesini büyük ölçüde yitirir. Diplomasi burada ordudan daha keskin bir silahtır."
+      body: "Rakibi yalnızlaştır. Müttefiklerinden, destekçilerinden, kaynaklarından koparılan rakip, savaşma iradesini büyük ölçüde yitirir. Ekrandan örnek: Tywin Lannister, sahada yenemediği Robb Stark'ı müttefiklerini (Frey ve Bolton) kopararak çökertti."
     },
     {
       rank: "3", cls: "",
       title: "Sonra: Ordusuyla sahada yüzleş",
-      body: "Ancak ilk iki yol kapandıysa açık çatışmaya girilir. Bu noktada bile amaç imha değil, düşmanın direncini en az kayıpla kırmaktır: 'Bütün olarak ele geçirilen ülke, yakılıp yıkılan ülkeden değerlidir.'"
+      body: "Ancak ilk iki yol kapandıysa açık çatışmaya girilir. Bu noktada bile amaç imha değil, düşmanın direncini en az kayıpla kırmaktır: 'Bütün olarak ele geçirilen ülke, yakılıp yıkılan ülkeden değerlidir.' Ekrandan örnek: Piçlerin Savaşı'nda Jon Snow'un öfkeyle açık savaşa sürüklenişi, bu basamağın bile nasıl tuzağa dönüşebildiğini gösterir."
     },
     {
       rank: "4", cls: "worst",
       title: "En kötüsü: Surlarla çevrili şehri kuşat",
-      body: "Kuşatma; zaman, kaynak ve insan kaybının en yüksek olduğu yoldur. Sun Tzu'ya göre kuşatma yalnızca başka hiçbir seçenek kalmadığında, çaresizlikten yapılır. Modern karşılığı: en pahalı, en yıpratıcı cepheye kendini kilitlemek."
+      body: "Kuşatma; zaman, kaynak ve insan kaybının en yüksek olduğu yoldur. Sun Tzu'ya göre kuşatma yalnızca başka hiçbir seçenek kalmadığında, çaresizlikten yapılır. Ekrandan örnek: Stannis Baratheon'un Karasu'da Kralın Şehri'ne doğrudan yüklenmesi — ordusunu surların (ve çıldırateşinin) önünde eritti."
     }
   ],
 
   scenarios: [
     {
-      domain: "İş ve Strateji",
-      title: "Fiyat Savaşı Tuzağı",
-      setup: "Sektörünüze agresif bir rakip girdi ve fiyatları %30 kırarak pazar payı kapmaya başladı. Yatırımcılarınız 'biz de fiyat kıralım' baskısı yapıyor. Kasanız rakibinkinden küçük. Ne yaparsınız?",
+      domain: "Game of Thrones",
+      title: "Genç Kurt Sahada Yenilmiyor",
+      setup: "Tywin Lannister'sın. Robb Stark girdiği her meydan savaşını kazandı; ordusu kararlı, komutanlığı parlak. Westeros'un en zengin hanesi sensin ama sahada onu yenemiyorsun. Ne yaparsın?",
       choices: [
         {
-          text: "Fiyatları rakipten daha fazla kırarım; pazar payımı korumak her şeyden önemli.",
+          text: "Bütün Lannister gücünü toplar, Genç Kurt'la son bir büyük meydan savaşına girerim.",
           grade: "poor",
-          verdict: "Kuşatmaya girdin.",
-          feedback: "Rakibin seçtiği zeminde, rakibin güçlü olduğu silahla (kasa derinliği) savaşmayı kabul ettin. Fiyat savaşı tam olarak Sun Tzu'nun 'surlu şehri kuşatmak' dediği şeydir: en uzun, en pahalı, en yıpratıcı yol — ve küçük kasa burada önce tükenir."
+          verdict: "Rakibin en güçlü olduğu zeminde savaşmayı seçtin.",
+          feedback: "Robb'un tek üstün olduğu alan meydan savaşı — onu tam orada karşılamak, üçüncü basamağa (orduyla yüzleşme) üstelik rakibin şartlarında inmektir. Dizide bu yolu seçen Stannis'in Karasu'da başına geleni hatırla: cesaret, yanlış zeminde sadece kayıpları büyütür."
         },
         {
-          text: "Fiyata hiç dokunmam; mevcut müşterilerime uzun vadeli sözleşme ve sadakat avantajları sunarak onları kilitlerim.",
+          text: "Nehirova'yı kuşatır, Tully topraklarını aç bırakarak Kuzey ordusunu eritirim.",
           grade: "mid",
-          verdict: "Savunma sağlam, ama plan hâlâ rakipte.",
-          feedback: "Müşteriyi kilitlemek 'önce yenilmez ol' ilkesine uyar ve fiyat savaşına girmemen doğru. Ancak hâlâ tepki veriyorsun; rakibin planını bozmuyorsun, sadece etkisini geciktiriyorsun."
+          verdict: "Kuşatmaya girdin — en pahalı yol.",
+          feedback: "Kan dökmüyorsun ama Sun Tzu'nun 'en kötü seçenek' dediği basamaktasın: aylar sürer, hazineni tüketir ve bu sırada Stannis gibi diğer düşmanların serbest kalır. Tywin'in dehası, savaşı kazanmanın ordularla ilgili olmadığını görmesiydi."
         },
         {
-          text: "Savaş alanını değiştiririm: rakibin ucuza veremeyeceği bir değer (entegrasyon, hizmet, niş segment) etrafında konumlanır, dağıtım kanallarıyla münhasır ortaklıklar kurarım.",
+          text: "Robb'un ittifakını içeriden çözerim: evlilik sözü bozularak küstürülen Freyler ve hırslı Boltonlarla gizlice anlaşırım.",
           grade: "best",
-          verdict: "Savaşmadan kazandın.",
-          feedback: "Rakibin planını (fiyatla kıyaslanmak) geçersiz kıldın ve ittifakları (kanallar) ondan önce kapattın. Fiyat avantajı, fiyatın kıyaslanamadığı bir pazarda silah olmaktan çıkar. Bu, 'düşmanın planını bozmak + ittifaklarını dağıtmak' basamaklarının birebir uygulamasıdır."
+          verdict: "Savaşmadan kazandın — Kızıl Düğün'ün stratejik anatomisi bu.",
+          feedback: "Sahada yenilmeyen ordu, ittifakları dağıtılınca tek gecede çöktü. Robb kendi eliyle açık vermişti: Frey'lere verdiği evlilik sözünü bozarak müttefikini küstürdü. Tywin bu çatlağı gördü ve ikinci basamağı ('ittifakları dağıt') acımasız bir kusursuzlukla uyguladı. Ahlaken karanlık, stratejik olarak ders kitabı — Tywin'in kendi sözüyle: 'Akşam yemeğinde bir düzine adam öldürmek neden savaşta on bin adam öldürmekten daha az soylu, açıkla bana.'"
         }
       ],
-      note: "\"Muharebede zafer kazananlar yalnızca 'iyi savaşanlardır'; üstün olan, zaferi savaş gerekmeden elde edendir.\""
+      note: "\"Üstün strateji önce düşmanın planına, sonra ittifaklarına, en son ordusuna saldırır.\""
     },
     {
-      domain: "Kişisel Gelişim",
-      title: "Tartışmaya Davet",
-      setup: "Aile toplantısında bir yakınınız, kalabalığın önünde sizi kışkırtan ve geçmiş bir hatanızı diline dolayan imalı sözler söylüyor. Herkes sizin tepkinizi bekliyor. Ne yaparsınız?",
+      domain: "The Godfather",
+      title: "Beş Aile Savaşı",
+      setup: "Vito Corleone'sin. Büyük oğlun Sonny pusuya düşürülüp öldürüldü, sen suikasttan yeni çıktın, Michael sürgünde. Ailelerin savaşı iki tarafı da kanatıyor. Konsey senden intikam bekliyor. Ne yaparsın?",
       choices: [
         {
-          text: "Anında ve sert şekilde cevap verir, haklılığımı herkese kanıtlarım.",
+          text: "Sonny'nin intikamı için Tattaglia ailesine topyekûn savaş açarım.",
           grade: "poor",
-          verdict: "Rakibin seçtiği savaşa girdin.",
-          feedback: "Kışkırtan kişi zemini, zamanı ve seyirciyi kendisi seçti — sen sadece onun planındaki rolünü oynadın. Sun Tzu: 'Öfkelendirilmeye gelen komutan yenilgiye gelir.' Kazansan bile kalabalığın gözünde 'olay çıkaran' sensin."
+          verdict: "Öfkeyle savaşa gelen, yenilgiye gelir.",
+          feedback: "İntikam savaşı tam olarak rakiplerinin istediği şey: aile kan kaybetmeye devam eder, polis ve siyaset desteğini yitirirsin ve Michael asla eve dönemez. Sun Tzu: 'Öfke yeniden sevince dönebilir; ama yok olan devlet bir daha kurulamaz.'"
         },
         {
-          text: "Hiç cevap vermem, içime atar ve toplantı boyunca sessiz kalırım.",
+          text: "Savunmaya çekilir, aileyi korur ve fırtınanın geçmesini beklerim.",
           grade: "mid",
-          verdict: "Çatışmadan kaçındın ama zemini terk ettin.",
-          feedback: "Savaşa girmemek doğru içgüdü; fakat tam sessizlik bazen sahayı rakibe bırakır ve içeride biriken öfke başka bir gün kontrolsüz patlar. Savaşmadan kazanmak pasiflik değil, inisiyatifi geri almaktır."
+          verdict: "Yenilmezsin ama zafer planın yok.",
+          feedback: "Savunma seni yenilgiden korur — Sun Tzu'nun 'önce yenilmez ol' ilkesi. Ama tek başına bekleyiş zafer getirmez: Michael sürgünde kalır, rakipler güçlenir, inisiyatif onlarda. Savaşmadan kazanmak pasiflik değil, inisiyatifi geri almaktır."
         },
         {
-          text: "Sakin bir espri ya da kısa, soğukkanlı bir cümleyle konuyu etkisizleştirir; gerekiyorsa konuyu daha sonra, baş başa ve kendi seçtiğim zamanda konuşurum.",
+          text: "Beş Aile toplantısını ben çağırır, barışı ben ilan ederim: 'Bu savaşı ben bitiriyorum.'",
           grade: "best",
           verdict: "Savaşmadan kazandın.",
-          feedback: "Kışkırtmanın amacı seni o an, o seyirci önünde savaşa çekmekti — planı bozdun. Asıl konuşmayı kendi seçtiğin zemine (baş başa, sakin an) taşıyarak araziyi sen belirledin. Seyirci önünde itibarını koruyan taraf da sen oldun."
+          feedback: "Vito'nun yaptığı tam olarak bu: masayı kendisi kurdu, barışın şartlarını kendisi belirledi ve Michael'ın güvenli dönüşünü güvence altına aldı. Üstelik o masada asıl düşmanın Tattaglia değil Barzini olduğunu gördü — barış toplantısı aynı zamanda istihbarat zaferiydi. Savaşın yerini, zamanını ve bitişini rakibine değil kendine seçtirdin."
         }
       ],
-      note: "\"Üstün komutan, savaşacağı yeri ve zamanı kendisi seçer; düşmanını oraya getirtir, kendisi düşmanın ayağına gitmez.\""
+      note: "\"Usta komutan, düşman birliklerini savaşmadan teslim alır; savaşın nerede biteceğine de kendisi karar verir.\""
     },
     {
-      domain: "Siber Güvenlik (Savunma)",
-      title: "Saldırganı Caydırmak",
-      setup: "Orta ölçekli bir şirketin güvenlik mimarisinden sorumlusunuz. Tehdit istihbaratı, sektörünüzü hedefleyen bir fidye yazılımı grubunun fırsatçı (en kolay hedefi seçen) taramalar yaptığını söylüyor. Bütçeniz sınırlı. Önceliğiniz ne olur?",
+      domain: "Breaking Bad",
+      title: "Kartelin Gölgesinde",
+      setup: "Gus Fring'sin. Kartel senden boyun eğmeni istiyor; yıllar önce ortağını gözünün önünde öldürdüler ve güçleri hâlâ seninkinden büyük. Şimdi yeniden kapına dayandılar. Ne yaparsın?",
       choices: [
         {
-          text: "Bütçeyi olay müdahale (incident response) ekibini büyütmeye ayırırım; saldırı geldiğinde en hızlı şekilde savaşırız.",
-          grade: "mid",
-          verdict: "İyi savaşmaya hazırlanıyorsun; oysa hedef hiç savaşmamaktı.",
-          feedback: "Müdahale kabiliyeti şart, ama bu strateji savaşı baştan kabul eder. Sun Tzu'nun sıralamasında 'orduyla sahada yüzleşmek' üçüncü sıradadır — ilk tercih değil. Fırsatçı saldırganı hiç kapıya getirmemek daha ucuzdur."
-        },
-        {
-          text: "Saldırı yüzeyini küçültür ve saldırganın keşif aşamasını pahalılaştırırım: dışa açık servisleri azaltır, MFA'yı her yerde zorunlu kılar, yamaları otomatikleştiririm. Fırsatçı tarayıcı için 'kolay hedef' görüntüsünü ortadan kaldırırım.",
-          grade: "best",
-          verdict: "Savaşmadan kazandın.",
-          feedback: "Fırsatçı saldırganın planı 'en ucuz hedefi bul' üzerine kuruludur. Keşif aşamasında maliyeti yükselterek bu planı bozdun: saldırgan daha kolay bir hedefe yönelir ve çatışma hiç yaşanmaz. Bu, savunmada 'düşmanın planını bozmak' ilkesinin birebir karşılığıdır."
-        },
-        {
-          text: "Bütçeyi siber sigortaya ayırırım; saldırı olursa zarar karşılanır.",
+          text: "Adamlarımla anında misilleme yapar, kartele açık savaş ilan ederim.",
           grade: "poor",
-          verdict: "Yenilgiyi baştan fiyatladın.",
-          feedback: "Sigorta zarar transferidir, strateji değil. Sun Tzu'nun diliyle: şehri kuşattırmayı kabul edip yıkım faturasını başkasına ödetmeyi planlıyorsun. Veri kaybı, kesinti ve itibar zararı poliçeyle geri gelmez; saldırgan için de 'kolay hedef' olmaya devam edersin."
+          verdict: "Gücün yetmeyen savaşa girdin.",
+          feedback: "Sun Tzu net: 'Sayıca eşit değilsen düşmandan kaçınmayı bil.' Kartel hâlâ daha güçlü; açık savaş seni Los Pollos imparatorluğunla birlikte yok eder. Öfke duyduğun anda savaşmak, intikamı değil yıkımı garantiler."
+        },
+        {
+          text: "Şimdilik şartlarını kabul eder, haraç öder ve zaman kazanırım.",
+          grade: "mid",
+          verdict: "Zaman kazandın ama plan hâlâ onlarda.",
+          feedback: "Geri çekilmek bazen araçtır, ama tek başına strateji değildir. Sadece ödersen 'kolay kaynak' olursun ve istekleri büyür. Gus'ın farkı: boyun eğer GİBİ yaparken aslında yenilmez bir cephe (meşru iş, kusursuz operasyon) inşa edip kendi saatini beklemesiydi."
+        },
+        {
+          text: "Yıllarca sabreder, yenilmez bir meşru cephe kurarım; sonra 'teslimiyet' görüntüsüyle düşmanın ayağına gider ve liderliği tek hamlede, kendi zafer kutlamasının ortasında çökertirim.",
+          grade: "best",
+          verdict: "Savaşmadan kazandın — 'Salud' sahnesinin anatomisi.",
+          feedback: "Gus önce kendini yenilmez kıldı (Sun Tzu, Bölüm 4'ün ön sezisi), sonra düşmanın planını — seni teslim almış olma rahatlığını — silaha çevirdi. Kartelin tüm liderliği tek bir kadehte düştü; tek bir kurşun sıkılmış bir 'savaş' yaşanmadı. Düşmanını kendi ayağına değil, kendi kibrine yakalattın."
         }
       ],
-      note: "\"Önce kendini yenilmez kıl, sonra düşmanın yenilebilir olmasını bekle. Yenilmezlik kendi elindedir.\""
+      note: "\"Önce kendini yenilmez kıl, sonra düşmanın yenilebilir olmasını bekle. Yenilmezlik kendi elindedir; düşmanın açığı onun elindedir.\""
     },
     {
-      domain: "Tarihsel Komuta",
-      title: "Surların Önünde",
-      setup: "MÖ 4. yüzyıl. Ordunuz, erzakı bol ve surları sağlam bir şehrin önünde. Şehrin müttefiki olan komşu devletin ordusu üç hafta uzaklıkta. Kendi erzakınız iki aylık. Kuşatma kuleleriniz hazır. Ne emredersiniz?",
+      domain: "Yüzüklerin Efendisi",
+      title: "Mordor'a Karşı",
+      setup: "Batı'nın baş stratejisti Gandalf'sın. Sauron'un orduları sayıca ezici, gücü her gün artıyor ve hiçbir ordu Mordor'u savaş meydanında yenemez. Elrond Konseyi senden bir yol bekliyor. Ne önerirsin?",
       choices: [
         {
-          text: "Derhal genel taarruz: kuleler hazırken surlara yüklenir, şehri kanla da olsa alırım.",
+          text: "İnsanların ve elflerin bütün ordularını toplayıp Mordor'a topyekûn taarruz öneririm.",
           grade: "poor",
-          verdict: "Sun Tzu'nun 'en kötü yol' dediği tam olarak bu.",
-          feedback: "Sur taarruzu askerin üçte birini duvar dibinde eritir ve şehir düşse bile elinize yıkıntı geçer. 'Bütün olarak ele geçirilen şehir, yakılıp yıkılandan değerlidir.' Üstelik üç hafta sonra yorgun ordunuz, gelen müttefik ordusuyla da savaşmak zorunda kalır."
+          verdict: "Düşmanın gücünün kaynağına değil, gölgesine saldırdın.",
+          feedback: "Sayıca ezici bir düşmana karşı topyekûn taarruz, ordunu yok eder ve Sauron'un asıl gücüne — Yüzük'e — hiç dokunmaz. Son İttifak bunu bir kez denedi; zafer bile kalıcı olmadı çünkü gücün kaynağı ayakta kaldı. Orduyu yenmek, planı yenmek değildir."
         },
         {
-          text: "Kuşatmayı sürdürür, şehri açlıkla teslim olmaya zorlarım.",
+          text: "Minas Tirith'i güçlendirip sonsuz savunmaya geçmeyi öneririm; surlar arkasında bekleriz.",
           grade: "mid",
-          verdict: "Kan dökmüyorsun ama zaman senin aleyhine.",
-          feedback: "Şehrin erzakı bol, seninki iki aylık; müttefik ordu üç hafta uzakta. Bekleyen taraf güçlenmiyor, zayıflıyorsun. Sun Tzu uzayan seferi en büyük tehlike sayar: 'Hiçbir ülke uzun süren savaştan fayda görmemiştir.'"
+          verdict: "Yenilgiyi geciktirdin, zaferi planlamadın.",
+          feedback: "Savunma seni bugün ayakta tutar — ama Sauron her gün güçlenirken zaman senin aleyhine işliyor. Sun Tzu: savunma yenilgiyi önler, zaferi getirmez. Kuşatılan taraf olmayı kabul etmek, kuşatma yapmak kadar pahalı bir bekleyiştir."
         },
         {
-          text: "Elçi gönderip müttefik devlete tarafsız kalması için tavizler öneririm; aynı anda şehre 'müttefikiniz gelmeyecek, onurlu teslim şartları sunuyoruz' haberini ulaştırırım.",
+          text: "Yüzük'ü gizlice Hüküm Dağı'na gönderirim; Kara Kapı önüne çıkardığımız ordu yalnızca Sauron'un Göz'ünü başka yöne çeken bir aldatmacadır.",
           grade: "best",
-          verdict: "Savaşmadan kazandın.",
-          feedback: "Önce ittifakı dağıttın (müttefik tarafsızlaştı), sonra düşmanın planını (kurtarılma umudunu) çökerttin. Umudunu yitiren şehir, onurlu teslim şartlarıyla bütün olarak teslim olur: asker, erzak ve şehir sana sağlam geçer. Üç basamağın — plan, ittifak, ordu — ders kitabı uygulaması."
+          verdict: "Savaşmadan kazandın — planın kaynağını yok ettin.",
+          feedback: "Birinci basamağın en saf hali: düşmanın ordusu değil, gücünün ve planının kaynağı (Yüzük) hedef alındı. Kara Kapı'daki 'umutsuz saldırı' bile asıl plana hizmet eden bir aldatmacaydı — Sun Tzu'nun 'savaş, aldatma yoludur' ilkesiyle birinci basamağın kusursuz birleşimi. Yüzük eridiğinde milyonluk ordu tek kılıç darbesi gerekmeden çöktü."
         }
       ],
-      note: "\"Usta komutan, düşman birliklerini savaşmadan teslim alır; şehirleri kuşatmadan düşürür; devleti uzun seferlere sürüklemeden yıkar.\""
+      note: "\"Üstün komutan zaferi, kalabalık orduda değil, düşmanın dayandığı şeyi görmekte arar.\""
     }
   ],
 
@@ -162,26 +163,26 @@ window.MODULE_DATA = {
       explain: "Savaşmadan kazanmak pasiflik ya da kaçış değildir; inisiyatifi alıp rakibin planını, ittifaklarını ve iradesini hedefleyerek sonucu çatışma olmadan belirlemektir."
     },
     {
-      q: "Rakip firmanın başlattığı fiyat savaşına aynı silahla (daha derin indirim) karşılık vermek Sun Tzu'nun hangi hatasına karşılık gelir?",
+      q: "Robb Stark sahada hiç yenilmemişken Tywin Lannister zaferi hangi basamakla kazandı?",
       choices: [
-        "Casus kullanmamak",
-        "Araziyi okumamak",
-        "Rakibin seçtiği zeminde, en pahalı yöntemle savaşmak (kuşatma)",
-        "Orduyu ikiye bölmek"
+        "Daha büyük bir orduyla meydan savaşında",
+        "Nehirova'yı kuşatarak",
+        "Robb'un ittifakını (Frey ve Bolton) içeriden çözerek",
+        "Kışyarı'nı ele geçirerek"
       ],
       answer: 2,
-      explain: "Fiyat savaşı, rakibin seçtiği zemin ve silahtır; oraya girmek 'surlu şehri kuşatmak' gibi en yıpratıcı yola kendini kilitlemektir. Üstün strateji zemini değiştirir."
+      explain: "Kızıl Düğün, 'ittifakları dağıt' basamağının ekrandaki en çarpıcı örneğidir: meydanda yenilmeyen ordu, müttefikleri koparılınca tek gecede çöktü. Robb'un Frey'lere verdiği sözü bozması, Tywin'in kullandığı çatlağı bizzat açmıştı."
     },
     {
-      q: "Savunma güvenliğinde 'saldırganın keşif maliyetini yükseltmek' hangi Sun Tzu basamağının uygulamasıdır?",
+      q: "Yüzüklerin Efendisi'nde Yüzük'ü yok etme planı Sun Tzu'nun hangi ilkesinin örneğidir?",
       choices: [
-        "Düşmanın planını bozmak",
+        "Düşmanın planını ve gücünün kaynağını bozmak",
         "Şehri kuşatmak",
         "Orduyla sahada yüzleşmek",
-        "Ateşle saldırı"
+        "Uzun savaşla düşmanı yormak"
       ],
       answer: 0,
-      explain: "Fırsatçı saldırganın planı 'en kolay hedefi seç' üzerine kuruludur. Kolay hedef görüntüsünü ortadan kaldırmak bu planı daha keşif aşamasında bozar; çatışma hiç başlamaz."
+      explain: "Sauron'un ordusu değil, gücünün kaynağı (Yüzük) hedef alındı — birinci basamağın en saf hali. Kara Kapı'daki saldırı bile asıl plana hizmet eden bir aldatmacaydı."
     },
     {
       q: "Sun Tzu kuşatmayı neden 'en kötü yol' sayar?",
@@ -192,33 +193,33 @@ window.MODULE_DATA = {
         "Kuşatma sırasında casusluk yapılamadığı için"
       ],
       answer: 1,
-      explain: "Kuşatma aylar sürer, orduyu eritir ve şehir düşse bile geriye yıkıntı kalır. Sun Tzu için değerli olan, hedefi 'bütün olarak' ele geçirmektir."
+      explain: "Kuşatma aylar sürer, orduyu eritir ve şehir düşse bile geriye yıkıntı kalır. Stannis'in Karasu'da surlara doğrudan yüklenmesi bu maliyetin ekrandaki özetidir."
     },
     {
-      q: "Kalabalık önünde kışkırtılan kişinin 'asıl konuşmayı baş başa, kendi seçtiği zamana taşıması' hangi ilkenin uygulamasıdır?",
+      q: "Vito Corleone'nin Beş Aile toplantısını bizzat çağırıp barışı kendisinin ilan etmesi hangi ilkenin uygulamasıdır?",
       choices: [
         "Ateşle saldırı: güçlü aracı kontrollü kullanmak",
         "Dokuz durum: ölüm zemininde savaşmak",
-        "Savaşın yeri ve zamanını rakibe değil kendine seçtirmek",
+        "Savaşın yerini, zamanını ve bitişini rakibe değil kendine seçtirmek",
         "Casusların kullanımı: bilgiyi gizlemek"
       ],
       answer: 2,
-      explain: "Kışkırtan taraf zemin, zaman ve seyirciyi seçmiştir. Yanıtı erteleyip kendi zeminine taşıyan kişi inisiyatifi geri alır — 'düşmanını kendi ayağına getirt, onun ayağına gitme.'"
+      explain: "Vito masayı kendisi kurdu, şartları kendisi belirledi ve Michael'ın dönüşünü güvence altına aldı — üstelik o masada asıl düşmanın Barzini olduğunu da gördü. İnisiyatif baştan sona ondaydı."
     }
   ],
 
   practice: [
     {
-      title: "Bir 'fiyat savaşı'nı teşhis et",
-      desc: "Bu hafta hayatında, rakibin/karşı tarafın seçtiği zeminde savaşmayı kabul ettiğin bir durum bul (tartışma, rekabet, pazarlık). Zemini nasıl değiştirebileceğini bir paragraf yaz."
+      title: "Kızıl Düğün'ü stratejist gözüyle yeniden izle",
+      desc: "Game of Thrones S3 'The Rains of Castamere' bölümünü aç ve dört basamaklı merdiveni sahneye uygula: Tywin hangi basamağı kullandı? Robb hangi hatayla (Frey ittifakını kendi eliyle kırarak) bu kapıyı araladı?"
     },
     {
-      title: "Bir planı doğmadan boz",
-      desc: "Önümüzdeki günlerde gelecek bir çatışmayı (zor toplantı, itiraz, müzakere) önceden tahmin et ve daha gerçekleşmeden etkisizleştirecek tek bir hamle planla (önden bilgi paylaş, beklentiyi yönet, müttefik kazan)."
+      title: "İzlediğin bir dizide 'kuşatma' bul",
+      desc: "Şu an izlediğin herhangi bir dizide aylardır süren, iki tarafı da tüketen ve ilerlemeyen bir çatışma bul (rekabet, dava, aile kavgası...). Karakterlerin yerinde olsan hangi üst basamak (planı boz / ittifakı dağıt) mümkündü? Bir paragraf yaz."
     },
     {
-      title: "Kuşatmalarını listele",
-      desc: "Aylardır sürdürdüğün, kaynak tüketen ama ilerlemeyen bir 'kuşatmanı' (proje, alışkanlık mücadelesi, anlaşmazlık) belirle. Sun Tzu'nun ilk iki basamağıyla (planı boz / ittifakları değiştir) yeniden çerçevele ya da bilinçli olarak terk et."
+      title: "Bir bölümü Sun Tzu gözüyle izle",
+      desc: "Favori stratejistini seç — Tyrion, Gus Fring, Michael Corleone, Varys... Bir bölüm boyunca verdiği her kararı 'planı boz / ittifakı dağıt / orduyla yüzleş / kuşat' şemasına yerleştir. Hangi basamakta en çok vakit geçiriyor?"
     }
   ]
 };
