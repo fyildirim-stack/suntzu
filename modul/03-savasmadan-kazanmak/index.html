@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bölüm 3 — Savaşmadan Kazanmak | Savaş Sanatı</title>
+  <link rel="stylesheet" href="../../assets/css/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <span class="ideogram">孫子</span>
+      <a href="../../index.html">← Yol Haritası</a>
+      <span class="sub">Bölüm 3 / 13 · Strateji ile Saldırı</span>
+    </div>
+  </header>
+
+  <!-- 1. Animasyonlu "video-vari" giriş -->
+  <section class="module-hero">
+    <svg class="hero-map" viewBox="0 0 960 360" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+      <!-- arazi çizgileri -->
+      <path d="M0,300 Q240,250 480,290 T960,270" fill="none" stroke="#c9a84c" stroke-width="1.5"/>
+      <path d="M0,330 Q300,300 600,330 T960,310" fill="none" stroke="#c9a84c" stroke-width="1"/>
+      <!-- nehir -->
+      <path d="M620,0 Q600,120 660,200 Q710,270 690,360" fill="none" stroke="#6a8caf" stroke-width="3"/>
+      <!-- şehir (hedef) -->
+      <rect x="770" y="120" width="60" height="60" fill="none" stroke="#e8dcc3" stroke-width="2"/>
+      <circle class="pulse" cx="800" cy="150" r="40" fill="none" stroke="#c0392b" stroke-width="1.5"/>
+      <!-- ordu hareket okları: doğrudan değil, dolaylı yollar -->
+      <path class="march" d="M80,200 Q300,80 520,110 T770,140" fill="none" stroke="#c0392b" stroke-width="2"/>
+      <path class="march" d="M80,260 Q360,330 600,280 T775,170" fill="none" stroke="#e8dcc3" stroke-width="1.5"/>
+      <!-- birlik noktaları -->
+      <circle cx="80" cy="200" r="6" fill="#c0392b"/>
+      <circle cx="80" cy="260" r="5" fill="#e8dcc3"/>
+    </svg>
+    <div class="wrap">
+      <div class="chapter-label">Bölüm 3 · Strateji ile Saldırı</div>
+      <h1>Savaşmadan Kazanmak</h1>
+      <blockquote class="hero-quote" id="heroQuote"></blockquote>
+      <div class="hero-quote-author" id="heroQuoteAuthor"></div>
+    </div>
+  </section>
+
+  <main class="wrap">
+
+    <!-- 2. Tarihsel bağlam -->
+    <section class="lesson">
+      <h2><span class="sec-num">一</span>Tarihsel Bağlam</h2>
+      <p>
+        Savaş Sanatı'nın üçüncü bölümü, kitabın en çok alıntılanan fikrini taşır: zaferin amacı düşmanı yok etmek değil,
+        <strong>onu bütün olarak, mümkünse hiç savaşmadan ele geçirmek</strong>tir. Sun Tzu'nun yaşadığı İlkbahar-Sonbahar
+        döneminde (MÖ ~5. yüzyıl) savaşlar devletlerin tüm ekonomisini yutuyordu; bin savaş arabası ve yüz bin asker
+        seferber etmenin günlük maliyetini sayan Sun Tzu, en parlak zaferin bile pahalı bir başarısızlık olabileceğini görmüştü.
+      </p>
+      <div class="original-text">
+        "Savaşta en iyi politika devleti bütün olarak ele geçirmektir; yakıp yıkmak ondan aşağıdır.
+        Bir orduyu bütün olarak teslim almak, onu imha etmekten iyidir. […]
+        Bu yüzden yüz savaşta yüz zafer kazanmak hünerlerin en üstünü değildir;
+        hünerlerin en üstünü, düşmanı savaşmadan teslim almaktır."
+        <br/><small>— Savaş Sanatı, Bölüm 3</small>
+      </div>
+      <p class="dim">
+        Klasik örnek: MÖ 632 Chengpu seferinde Jin devleti, Chu'nun müttefiklerini (Cao ve Wei) önceden koparıp
+        rakibini diplomatik olarak yalnızlaştırdı; asıl muharebe başlamadan Chu koalisyonu çözülmüştü.
+        Aynı ilkenin modern yankısı, Soğuk Savaş'ın tek bir doğrudan muharebe yaşanmadan kazanılmasıdır:
+        rakibin ekonomik planını ve ittifak sistemini hedeflemek, ordusunu hedeflemekten daha belirleyici oldu.
+      </p>
+    </section>
+
+    <!-- 3. Tekniğin anatomisi -->
+    <section class="lesson">
+      <h2><span class="sec-num">二</span>Tekniğin Anatomisi: Dört Basamaklı Merdiven</h2>
+      <p>
+        Sun Tzu stratejik seçenekleri bir merdiven gibi sıralar — her basamak bir öncekinden daha pahalı,
+        daha yavaş ve daha risklidir. Usta stratejist mümkün olan en üst basamakta kalmaya çalışır.
+        Kartlara tıklayarak her basamağı aç:
+      </p>
+      <div class="diagram-box">
+        <svg viewBox="0 0 720 250" role="img" aria-label="Dört basamaklı strateji merdiveni diyagramı">
+          <defs>
+            <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+              <path d="M0,0 L10,5 L0,10 z" fill="#b8ab8d"/>
+            </marker>
+          </defs>
+          <!-- merdiven basamakları -->
+          <g font-family="Georgia, serif" font-size="14">
+            <rect x="20"  y="30"  width="160" height="52" rx="8" fill="#c9a84c"/>
+            <text x="100" y="52"  text-anchor="middle" fill="#2a2118" font-weight="bold">1 · Planı boz</text>
+            <text x="100" y="70"  text-anchor="middle" fill="#2a2118" font-size="11">maliyet: en düşük</text>
+
+            <rect x="200" y="80"  width="160" height="52" rx="8" fill="#1f1a13" stroke="#c9a84c"/>
+            <text x="280" y="102" text-anchor="middle" fill="#e8dcc3" font-weight="bold">2 · İttifakı dağıt</text>
+            <text x="280" y="120" text-anchor="middle" fill="#b8ab8d" font-size="11">diplomasi</text>
+
+            <rect x="380" y="130" width="160" height="52" rx="8" fill="#1f1a13" stroke="#c98a3d"/>
+            <text x="460" y="152" text-anchor="middle" fill="#e8dcc3" font-weight="bold">3 · Orduyla yüzleş</text>
+            <text x="460" y="170" text-anchor="middle" fill="#b8ab8d" font-size="11">açık çatışma</text>
+
+            <rect x="560" y="180" width="160" height="52" rx="8" fill="#c0392b"/>
+            <text x="640" y="202" text-anchor="middle" fill="#fff" font-weight="bold">4 · Şehri kuşat</text>
+            <text x="640" y="220" text-anchor="middle" fill="#f5d4cf" font-size="11">maliyet: en yüksek</text>
+          </g>
+          <!-- akış okları -->
+          <g stroke="#b8ab8d" stroke-width="1.5" fill="none">
+            <path d="M180,56 C200,56 200,106 200,106" marker-end="url(#arr)"/>
+            <path d="M360,106 C380,106 380,156 380,156" marker-end="url(#arr)"/>
+            <path d="M540,156 C560,156 560,206 560,206" marker-end="url(#arr)"/>
+          </g>
+          <text x="20" y="240" fill="#b8ab8d" font-size="11" font-family="Georgia, serif" font-style="italic">
+            Her basamağa yalnızca bir üstteki başarısız olursa inilir.
+          </text>
+        </svg>
+        <div class="diagram-caption">Stratejik tercih merdiveni: yukarıda kal — aşağı inmek mecburiyettir, tercih değil.</div>
+      </div>
+      <div class="principles" id="principles"></div>
+    </section>
+
+    <!-- 4. İnteraktif senaryolar -->
+    <section class="lesson">
+      <h2><span class="sec-num">三</span>Sahada Sen Karar Ver: 4 Alan, 4 Senaryo</h2>
+      <p>
+        Aynı ilke dört farklı hayata nasıl iner? Her senaryoda komuta sende.
+        Bir seçim yap; Sun Tzu'nun perspektifinden anında geri bildirim al.
+        En iyi yolu bulana kadar tekrar deneyebilirsin.
+      </p>
+      <div id="scenarios"></div>
+    </section>
+
+    <!-- 5. Quiz -->
+    <section class="lesson">
+      <h2><span class="sec-num">四</span>Bilgini Sına</h2>
+      <p class="dim">6 soru · her yanıttan sonra açıklama gösterilir.</p>
+      <div class="quiz-box" id="quiz"></div>
+    </section>
+
+    <!-- 6. Pratik kartı -->
+    <section class="lesson">
+      <h2><span class="sec-num">五</span>Bu Hafta Uygula</h2>
+      <p class="dim">Teknik ancak kendi hayatına değdiğinde öğrenilmiş sayılır. İşaretlerin bu tarayıcıda kaydedilir.</p>
+      <div class="practice-list" id="practiceList"></div>
+    </section>
+
+    <!-- 7. Slayt destesi -->
+    <section class="lesson" style="border-bottom:none">
+      <h2><span class="sec-num">六</span>Sunum Modu</h2>
+      <p class="dim">Modülün özetini 12 slaytlık bir deste olarak sun ya da yazdır (deste içinde <code>?print-pdf</code> ile PDF alınabilir).</p>
+      <div class="cta-row">
+        <a class="btn primary" href="slides.html">Slayt Destesini Aç →</a>
+        <a class="btn ghost" href="../../index.html">Yol Haritasına Dön</a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">Bölüm 3 — Savaşmadan Kazanmak · Savaş Sanatı İnteraktif Öğrenme Platformu</div>
+  </footer>
+
+  <script src="../../data/modul-03.js"></script>
+  <script src="../../assets/js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sun Tzu — Savaş Sanatı | İnteraktif Öğrenme Platformu</title>
+  <meta name="description" content="Sun Tzu'nun Savaş Sanatı tekniklerini iş, kişisel gelişim, siber güvenlik ve tarihsel senaryolarla pratik olarak öğren." />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <span class="ideogram">孫子</span>
+      <a href="index.html">Savaş Sanatı — İnteraktif Öğrenme</a>
+      <span class="sub">13 bölüm · pratik uygulamalı</span>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="wrap">
+      <h1>Savaş Sanatı'nı Yaşayarak Öğren</h1>
+      <p class="tagline">Sun Tzu'nun 2.500 yıllık stratejilerini iş, günlük hayat, siber güvenlik ve tarih senaryolarıyla uygula.</p>
+      <blockquote>
+        "Yüz savaşta yüz zafer kazanmak hünerlerin en üstünü değildir.
+        Hünerlerin en üstünü, düşmanı savaşmadan teslim almaktır."
+        <footer>— Sun Tzu, Savaş Sanatı, Bölüm 3</footer>
+      </blockquote>
+      <div class="cta-row" style="justify-content:center">
+        <a class="btn primary" href="modul/03-savasmadan-kazanmak/index.html">Pilot Modüle Başla →</a>
+        <a class="btn ghost" href="modul/03-savasmadan-kazanmak/slides.html">Slayt Destesini Aç</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="roadmap">
+    <div class="wrap">
+      <h2>Yol Haritası — 13 Bölüm</h2>
+      <div class="module-grid" id="moduleGrid"></div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      Her modül: animasyonlu giriş · tarihsel bağlam · 4 alanda interaktif senaryo · quiz · haftalık pratik kartı · slayt destesi.
+    </div>
+  </footer>
+
+  <script>
+    const chapters = [
+      { n: 1,  title: "Planlama",                desc: "Savaşa girmeden önce beş temel etkeni tart: yol, gökyüzü, arazi, komutan, disiplin." },
+      { n: 2,  title: "Savaşın Yürütülmesi",     desc: "Uzayan savaş kaynakları tüketir; hız ve verimlilik zaferin ekonomisidir." },
+      { n: 3,  title: "Savaşmadan Kazanmak",     desc: "En üstün zafer, düşmanı çatışmaya girmeden teslim almaktır.", open: true,
+        href: "modul/03-savasmadan-kazanmak/index.html" },
+      { n: 4,  title: "Taktiksel Konumlanma",    desc: "Önce yenilmez ol, sonra düşmanın zaafını bekle." },
+      { n: 5,  title: "Enerji ve Momentum",      desc: "Doğru zamanlama ve momentum, bireysel kahramanlıktan üstündür." },
+      { n: 6,  title: "Zayıflık ve Güç",         desc: "Dolu olandan kaçın, boş olana vur; su gibi şekilsiz ol." },
+      { n: 7,  title: "Manevra",                 desc: "Dolambaçlı yolu en kısa yola çevirme sanatı." },
+      { n: 8,  title: "Taktik Çeşitlemeleri",    desc: "Koşullara göre esne; hiçbir kurala körü körüne bağlanma." },
+      { n: 9,  title: "Ordunun Yürüyüşü",        desc: "Araziyi ve işaretleri oku; gözlemden istihbarat çıkar." },
+      { n: 10, title: "Arazi",                   desc: "Altı arazi tipi, altı ordu hastalığı: ortamı tanı." },
+      { n: 11, title: "Dokuz Durum",             desc: "Hangi zeminde nasıl davranılacağını bil; ölüm zemininde savaş." },
+      { n: 12, title: "Ateşle Saldırı",          desc: "Güçlü araçları doğru zamanda ve kontrollü kullan." },
+      { n: 13, title: "Casusların Kullanımı",    desc: "Öngörü tanrılardan değil, insanlardan (istihbarattan) gelir." },
+    ];
+
+    document.getElementById("moduleGrid").innerHTML = chapters.map(c => c.open
+      ? `<div class="module-card active">
+           <a href="${c.href}">
+             <span class="badge open">AÇIK</span>
+             <div class="num">Bölüm ${c.n}</div>
+             <h3>${c.title}</h3>
+             <p>${c.desc}</p>
+           </a>
+         </div>`
+      : `<div class="module-card locked">
+           <span class="badge soon">YAKINDA</span>
+           <div class="num">Bölüm ${c.n}</div>
+           <h3>${c.title}</h3>
+           <p>${c.desc}</p>
+         </div>`
+    ).join("");
+  </script>
+</body>
+</html>
