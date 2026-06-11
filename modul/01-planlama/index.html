@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bölüm 1 — Planlama | Savaş Sanatı</title>
+  <link rel="stylesheet" href="../../assets/css/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <span class="ideogram">孫子</span>
+      <a href="../../index.html">← Yol Haritası</a>
+      <span class="sub">Bölüm 1 / 13 · Başlangıç Hesapları</span>
+    </div>
+  </header>
+
+  <!-- 1. Animasyonlu "video-vari" giriş -->
+  <section class="module-hero">
+    <svg class="hero-map" viewBox="0 0 960 360" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+      <!-- hesap masası: yıldız haritası hissi -->
+      <path d="M0,300 Q240,250 480,290 T960,270" fill="none" stroke="#c9a84c" stroke-width="1.5"/>
+      <path d="M0,330 Q300,300 600,330 T960,310" fill="none" stroke="#c9a84c" stroke-width="1"/>
+      <!-- beş etken düğümleri -->
+      <circle class="pulse" cx="480" cy="150" r="34" fill="none" stroke="#c0392b" stroke-width="1.5"/>
+      <circle cx="480" cy="150" r="4" fill="#c0392b"/>
+      <circle cx="300" cy="90"  r="3.5" fill="#e8dcc3"/>
+      <circle cx="660" cy="90"  r="3.5" fill="#e8dcc3"/>
+      <circle cx="240" cy="220" r="3.5" fill="#e8dcc3"/>
+      <circle cx="720" cy="220" r="3.5" fill="#e8dcc3"/>
+      <circle cx="480" cy="40"  r="3.5" fill="#e8dcc3"/>
+      <!-- merkeze akan hesap çizgileri -->
+      <g class="march" fill="none" stroke="#e8dcc3" stroke-width="1.2">
+        <path d="M300,90 L480,150"/>
+        <path d="M660,90 L480,150"/>
+        <path d="M240,220 L480,150"/>
+        <path d="M720,220 L480,150"/>
+        <path d="M480,40 L480,150"/>
+      </g>
+    </svg>
+    <div class="wrap">
+      <div class="chapter-label">Bölüm 1 · Başlangıç Hesapları</div>
+      <h1>Planlama</h1>
+      <blockquote class="hero-quote" id="heroQuote"></blockquote>
+      <div class="hero-quote-author" id="heroQuoteAuthor"></div>
+    </div>
+  </section>
+
+  <main class="wrap">
+
+    <!-- 2. Tarihsel bağlam -->
+    <section class="lesson">
+      <h2><span class="sec-num">一</span>Tarihsel Bağlam</h2>
+      <p>
+        Savaş Sanatı'nın açılış bölümü tek bir uyarıyla başlar: <strong>savaş, devletin ölüm kalım meselesidir</strong> —
+        incelenmeden girilemez. Sun Tzu'nun çağında (İlkbahar-Sonbahar dönemi, MÖ ~5. yüzyıl) sefer kararları
+        tapınakta, hesap çubuklarıyla yapılan karşılaştırmalarla alınırdı. Sun Tzu bu ritüeli bir iddiaya dönüştürür:
+        <strong>savaşın sonucu sahada değil, bu masada belli olur.</strong>
+      </p>
+      <div class="original-text">
+        "Savaş, devlet için hayati önemdedir: yaşamın ve ölümün alanı, varlığa ya da yokluğa giden yoldur.
+        Beş temel etkenle incelenmeli, yedi karşılaştırmayla tartılmalıdır: Yol, Gökyüzü, Arazi, Komutan, Yöntem. […]
+        Bu hesapları dinleyen komutan kazanır; dinlemeyen yenilir. […] Savaş, aldatma yoludur."
+        <br/><small>— Savaş Sanatı, Bölüm 1</small>
+      </div>
+      <p class="dim">
+        Yedi karşılaştırma, beş etkenin pratiğe dökülmüş halidir: Hangi hükümdar Yol'a sahip? Hangi komutan daha yetenekli?
+        Gökyüzü ve arazi kimden yana? Disiplin kimde sağlam? Ordu kimde güçlü? Asker kimde eğitimli? Ödül ve ceza kimde adil?
+        Sun Tzu, bu yedi sorunun cevabıyla zaferi <em>savaştan önce</em> ilan edebileceğini söyler.
+      </p>
+    </section>
+
+    <!-- 3. Tekniğin anatomisi -->
+    <section class="lesson">
+      <h2><span class="sec-num">二</span>Tekniğin Anatomisi: Beş Temel Etken</h2>
+      <p>
+        Her plan, beş etkenin aynı masada tartılmasıyla başlar. Birini ihmal eden, ona yenilir.
+        Kartlara tıklayarak her etkeni ve ekrandan örneğini aç:
+      </p>
+      <div class="diagram-box">
+        <svg viewBox="0 0 720 300" role="img" aria-label="Beş temel etken diyagramı">
+          <defs>
+            <marker id="arr1" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+              <path d="M0,0 L10,5 L0,10 z" fill="#b8ab8d"/>
+            </marker>
+          </defs>
+          <!-- merkez: tapınak hesabı -->
+          <circle cx="360" cy="150" r="58" fill="#c9a84c"/>
+          <text x="360" y="144" text-anchor="middle" fill="#2a2118" font-family="Georgia, serif" font-weight="bold" font-size="15">Tapınak</text>
+          <text x="360" y="164" text-anchor="middle" fill="#2a2118" font-family="Georgia, serif" font-weight="bold" font-size="15">Hesabı</text>
+          <!-- beş etken -->
+          <g font-family="Georgia, serif" font-size="13">
+            <g>
+              <circle cx="360" cy="40" r="30" fill="#1f1a13" stroke="#c9a84c"/>
+              <text x="360" y="37" text-anchor="middle" fill="#c9a84c" font-size="15">道</text>
+              <text x="360" y="55" text-anchor="middle" fill="#e8dcc3" font-size="11">Yol</text>
+            </g>
+            <g>
+              <circle cx="160" cy="100" r="30" fill="#1f1a13" stroke="#c9a84c"/>
+              <text x="160" y="97" text-anchor="middle" fill="#c9a84c" font-size="15">天</text>
+              <text x="160" y="115" text-anchor="middle" fill="#e8dcc3" font-size="11">Gökyüzü</text>
+            </g>
+            <g>
+              <circle cx="560" cy="100" r="30" fill="#1f1a13" stroke="#c9a84c"/>
+              <text x="560" y="97" text-anchor="middle" fill="#c9a84c" font-size="15">地</text>
+              <text x="560" y="115" text-anchor="middle" fill="#e8dcc3" font-size="11">Arazi</text>
+            </g>
+            <g>
+              <circle cx="210" cy="240" r="30" fill="#1f1a13" stroke="#c9a84c"/>
+              <text x="210" y="237" text-anchor="middle" fill="#c9a84c" font-size="15">將</text>
+              <text x="210" y="255" text-anchor="middle" fill="#e8dcc3" font-size="11">Komutan</text>
+            </g>
+            <g>
+              <circle cx="510" cy="240" r="30" fill="#1f1a13" stroke="#c9a84c"/>
+              <text x="510" y="237" text-anchor="middle" fill="#c9a84c" font-size="15">法</text>
+              <text x="510" y="255" text-anchor="middle" fill="#e8dcc3" font-size="11">Yöntem</text>
+            </g>
+          </g>
+          <!-- merkeze akış -->
+          <g stroke="#b8ab8d" stroke-width="1.3" fill="none">
+            <path d="M360,70 L360,88"  marker-end="url(#arr1)"/>
+            <path d="M188,115 L305,140" marker-end="url(#arr1)"/>
+            <path d="M532,115 L415,140" marker-end="url(#arr1)"/>
+            <path d="M232,218 L312,180" marker-end="url(#arr1)"/>
+            <path d="M488,218 L408,180" marker-end="url(#arr1)"/>
+          </g>
+        </svg>
+        <div class="diagram-caption">Beş etken tek masada tartılır; zafer ilanı sahadan önce burada yapılır.</div>
+      </div>
+      <div class="principles" id="principles"></div>
+    </section>
+
+    <!-- 4. İnteraktif senaryolar -->
+    <section class="lesson">
+      <h2><span class="sec-num">三</span>Ekranda Komuta Sende: 4 Dizi/Film, 4 Senaryo</h2>
+      <p>
+        Bu kez kendini Tyrion Lannister'ın, Michael Corleone'nin, Michael Scofield'ın ve
+        Kral Théoden'in yerine koyacaksın. Her senaryoda karar ver; Sun Tzu'nun perspektifinden
+        anında geri bildirim al. En iyi yolu bulana kadar tekrar deneyebilirsin.
+      </p>
+      <p class="dim">⚠ Senaryolar Game of Thrones, The Godfather, Prison Break ve Yüzüklerin Efendisi için spoiler içerir.</p>
+      <div id="scenarios"></div>
+    </section>
+
+    <!-- 5. Quiz -->
+    <section class="lesson">
+      <h2><span class="sec-num">四</span>Bilgini Sına</h2>
+      <p class="dim">6 soru · her yanıttan sonra açıklama gösterilir.</p>
+      <div class="quiz-box" id="quiz"></div>
+    </section>
+
+    <!-- 6. Pratik kartı -->
+    <section class="lesson">
+      <h2><span class="sec-num">五</span>Bu Hafta İzle ve Analiz Et</h2>
+      <p class="dim">Teknik, sahneyi stratejist gözüyle izleyebildiğinde öğrenilmiş sayılır. İşaretlerin bu tarayıcıda kaydedilir.</p>
+      <div class="practice-list" id="practiceList"></div>
+    </section>
+
+    <!-- 7. Slayt destesi -->
+    <section class="lesson" style="border-bottom:none">
+      <h2><span class="sec-num">六</span>Sunum Modu</h2>
+      <p class="dim">Modülün özetini slayt destesi olarak sun ya da yazdır (deste içinde <code>?print-pdf</code> ile PDF alınabilir).</p>
+      <div class="cta-row">
+        <a class="btn primary" href="slides.html">Slayt Destesini Aç →</a>
+        <a class="btn ghost" href="../../index.html">Yol Haritasına Dön</a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">Bölüm 1 — Planlama · Savaş Sanatı İnteraktif Öğrenme Platformu</div>
+  </footer>
+
+  <script src="../../data/modul-01.js"></script>
+  <script src="../../assets/js/app.js"></script>
+</body>
+</html>

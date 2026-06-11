@@ -21,8 +21,9 @@ Her modül şu akışı izler:
 
 | Bölüm | Modül | Durum |
 |---|---|---|
+| 1 | [Planlama](modul/01-planlama/index.html) | ✅ |
 | 3 | [Savaşmadan Kazanmak](modul/03-savasmadan-kazanmak/index.html) | ✅ Pilot |
-| 1–2, 4–13 | Diğer 12 bölüm | 🔜 Yol haritasında |
+| 2, 4–13 | Diğer 11 bölüm | 🔜 Yol haritasında |
 
 ## Yerel Çalıştırma
 
